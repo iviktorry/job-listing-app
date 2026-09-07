@@ -3,13 +3,13 @@ import data from "../../data.json";
 
 export default function Main() {
   return (
-    <main className="bg-green-50 h-full px-4 py-8 flex flex-col gap-4">
+    <main className="bg-green-50 h-full px-6 py-8 flex flex-col gap-10">
       {data.map((item) => (
         <Offer
           key={item.id}
           company={item.company}
           logo={item.logo}
-          new={item.new}
+          isNew={item.new}
           featured={item.featured}
           position={item.position}
           role={item.role}
