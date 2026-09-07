@@ -1,5 +1,5 @@
-import bgMobile from "../assets/bg-header-mobile.svg";
-import bgDesktop from "../assets/bg-header-desktop.svg";
+import bgMobile from "../images/bg-header-mobile.svg";
+import bgDesktop from "../images/bg-header-desktop.svg";
 
 export default function Header() {
   return (
