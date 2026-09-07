@@ -12,7 +12,7 @@ export default function Offer({
   languages,
   tools,
 }) {
-  const style = `text-green-400 py-1 px-2 rounded-sm font-bold bg-green-50`;
+  const style = `text-green-400 py-1 px-2 lg:h-fit rounded-sm font-bold bg-green-50`;
   return (
     <article className="w-full px-6 py-5 rounded-md flex flex-col gap-3 shadow-xl shadow-green-400/20 bg-white">
       <img src={logo} className="relative -top-7" alt="logo" />
@@ -43,20 +43,21 @@ export default function Offer({
       </div>
       <div className="h-0 border-bs border-gray-400"></div>
 
-      <div className="flex gap-4 flex-wrap">
-        <span className={`${style}`}>{role}</span>
-        <span className={`${style}`}>{level}</span>
-        {languages.map((item, index) => (
-          <span key={index} className={`${style}`}>
-            {item}
-          </span>
-        ))}
+        <div className="flex gap-4 flex-wrap lg:items-center">
+          <span className={`${style}`}>{role}</span>
+          <span className={`${style}`}>{level}</span>
+          {languages.map((item, index) => (
+            <span key={index} className={`${style}`}>
+              {item}
+            </span>
+          ))}
 
-        {tools.map((item, index) => (
-          <span key={index} className={`${style}`}>
-            {item}
-          </span>
-        ))}
+          {tools.map((item, index) => (
+            <span key={index} className={`${style}`}>
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
     </article>
   );
