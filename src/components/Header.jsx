@@ -1,7 +1,7 @@
-import bgMobile from "../images/bg-header-mobile.svg";
-import bgDesktop from "../images/bg-header-desktop.svg";
+import bgMobile from "../../public/images/bg-header-mobile.svg";
+import bgDesktop from "../../public/images/bg-header-desktop.svg";
 
-export default function Header() {
+export default function Header() {  
   return (
     <header className="w-full bg-green-400">
       <picture className="w-full">
