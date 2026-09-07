@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  -color-green-400: hsl(180, 29%, 50%);
-  -color-green-50: hsl(180, 52%, 96%);
-  -color-gray-400: hsl(180, 8%, 52%);
-  -color-green-900: hsl(180, 14%, 20%);
+  --color-green-400: hsl(180, 29%, 50%);
+  --color-green-50: hsl(180, 52%, 96%);
+  --color-gray-400: hsl(180, 8%, 52%);
+  --color-green-900: hsl(180, 14%, 20%);
+  --font-serif: "League Spartan", sans-serif;
 }
