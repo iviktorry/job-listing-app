@@ -18,10 +18,23 @@ export default function Main() {
   const style = `text-green-400 py-0.5 px-2 lg:h-fit font-bold bg-green-50`;
 
   return (
-    <main className="bg-green-50 h-full px-6">
-      <Filters filters={filters} style={`${style}`} />
-      <div className="lg:max-w-300 lg:mx-auto py-8 lg:py-20">
-        <OffersList data={data} handleClick={handleClick} style={`${style}`} />
+    <main className="bg-green-50 h-full flex-1 px-6">
+      <div className="lg:max-w-300 lg:mx-auto">
+        {filters.length !== 0 ? (
+          <Filters
+            filters={filters}
+            style={`${style}`}
+            setFilters={setFilters}
+          />
+        ) : null}
+        <div className="py-10 md:py-10">
+          <OffersList
+            data={data}
+            handleClick={handleClick}
+            style={`${style}`}
+            filters={filters}
+          />
+        </div>
       </div>
     </main>
   );
