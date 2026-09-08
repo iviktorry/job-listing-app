@@ -1,4 +1,20 @@
-export default function Filters({ filters, style }) {
+import removeIcon from "../../public/images/icon-remove.svg";
+
+export default function Filters({
+  filters,
+  style,
+  setFilters,
+}) {
+  function handleClearAll() {
+    setFilters([]);
+  }
+
+  function handleDeleteFilter(event) {
+    const elValue = event.currentTarget.value;
+    console.log(elValue);
+    setFilters((prev) => prev.filter((item) => item !== elValue));
+  }
+
   return (
     <div className="flex justify-between relative -top-8 px-4 py-4 lg:h-18 lg:px-10 rounded-lg shadow-xl shadow-green-400/20 bg-white">
       <div className="flex gap-4 items-center flex-wrap">
