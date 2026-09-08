@@ -1,6 +1,6 @@
-import Offer from "./Offer";
 import data from "../../data.json";
 import { useState } from "react";
+import OffersList from "./OffersList";
 
 export default function Main() {
   const [filters, setFilters] = useState([]);
@@ -16,25 +16,10 @@ export default function Main() {
 
   console.log(filters);
   return (
-    <main className="bg-green-50 h-full px-6 py-8 flex flex-col gap-10 justify-center">
-      {data.map((item) => (
-        <Offer
-          key={item.id}
-          company={item.company}
-          logo={item.logo}
-          isNew={item.new}
-          featured={item.featured}
-          position={item.position}
-          role={item.role}
-          level={item.level}
-          posted={item.postedAt}
-          contract={item.contract}
-          location={item.location}
-          languages={item.languages}
-          tools={item.tools}
-          handleClick={handleClick}
-        />
-      ))}
+    <main className="bg-green-50 h-full px-6">
+      <div className="lg:max-w-300 lg:mx-auto py-8 lg:py-20">
+        <OffersList data={data} handleClick={handleClick} />
+      </div>
     </main>
   );
 }
