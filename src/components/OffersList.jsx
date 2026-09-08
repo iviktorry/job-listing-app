@@ -1,6 +1,6 @@
 import Offer from "./Offer";
 
-export default function OffersList({ data, handleClick }) {
+export default function OffersList({ data, handleClick, style }) {
   return (
     <div className="flex flex-col gap-10 justify-center">
       {data.map((item) => (
@@ -19,6 +19,7 @@ export default function OffersList({ data, handleClick }) {
           languages={item.languages}
           tools={item.tools}
           handleClick={handleClick}
+          style={style}
         />
       ))}
     </div>

@@ -14,11 +14,11 @@ export default function Offer({
   languages,
   tools,
   handleClick,
+  style,
 }) {
-  const style = `text-green-400 py-1 px-2 lg:h-fit rounded-sm font-bold bg-green-50 hover:bg-green-400 hover:text-green-50`;
   return (
     <article
-      className={`w-full px-6 pb-5 lg:py-8 lg:max-w-300 lg:mx-auto lg:flex lg:gap-6 rounded-lg shadow-xl shadow-green-400/20 bg-white ${featured ? "border-l-6 border-green-400" : ""}`}
+      className={`w-full px-6 pb-5 lg:py-8 lg:flex lg:gap-6 rounded-lg shadow-xl shadow-green-400/20 bg-white ${featured ? "border-l-6 border-green-400" : ""}`}
     >
       <img
         src={logo}
@@ -59,19 +59,19 @@ export default function Offer({
 
         <div className="flex gap-4 flex-wrap lg:items-center">
           <OfferDescriptionButton
-            style={`${style}`}
+            style={style}
             handleClick={handleClick}
             item={role}
           />
 
           <OfferDescriptionButton
-            style={`${style}`}
+            style={style}
             handleClick={handleClick}
             item={level}
           />
           {languages.map((item, index) => (
             <OfferDescriptionButton
-              style={`${style}`}
+              style={style}
               handleClick={handleClick}
               item={item}
               key={index}
@@ -80,7 +80,7 @@ export default function Offer({
 
           {tools.map((item, index) => (
             <OfferDescriptionButton
-              style={`${style}`}
+              style={style}
               handleClick={handleClick}
               item={item}
               key={index}
