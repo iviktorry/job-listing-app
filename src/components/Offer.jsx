@@ -1,3 +1,5 @@
+import OfferDescriptionButton from "./OfferDescriptionButton";
+
 export default function Offer({
   company,
   logo,
@@ -56,32 +58,33 @@ export default function Offer({
         <div className="h-0 border-bs border-gray-300 lg:hidden"></div>
 
         <div className="flex gap-4 flex-wrap lg:items-center">
-          <button onClick={handleClick} value={role} className={`${style}`}>
-            {role}
-          </button>
-          <button onClick={handleClick} value={level} className={`${style}`}>
-            {level}
-          </button>
+          <OfferDescriptionButton
+            style={`${style}`}
+            handleClick={handleClick}
+            item={role}
+          />
+
+          <OfferDescriptionButton
+            style={`${style}`}
+            handleClick={handleClick}
+            item={level}
+          />
           {languages.map((item, index) => (
-            <button
-              onClick={handleClick}
-              value={item}
+            <OfferDescriptionButton
+              style={`${style}`}
+              handleClick={handleClick}
+              item={item}
               key={index}
-              className={`${style}`}
-            >
-              {item}
-            </button>
+            />
           ))}
 
           {tools.map((item, index) => (
-            <button
-              onClick={handleClick}
-              value={item}
+            <OfferDescriptionButton
+              style={`${style}`}
+              handleClick={handleClick}
+              item={item}
               key={index}
-              className={`${style}`}
-            >
-              {item}
-            </button>
+            />
           ))}
         </div>
       </div>
