@@ -14,7 +14,8 @@ export default function Main() {
       return [...uniqueArr];
     });
   }
-  const style = `text-green-400 py-1 px-2 lg:h-fit rounded-sm font-bold bg-green-50 hover:bg-green-400 hover:text-green-50`;
+
+  const style = `text-green-400 py-0.5 px-2 lg:h-fit font-bold bg-green-50`;
 
   return (
     <main className="bg-green-50 h-full px-6">
