@@ -2,6 +2,10 @@ import Offer from "./Offer";
 import data from "../../data.json";
 
 export default function Main() {
+  function handleClick(event) {
+    const element = event.currentTarget.value;
+    console.log(element);
+  }
   return (
     <main className="bg-green-50 h-full px-6 py-8 flex flex-col gap-10 justify-center">
       {data.map((item) => (
@@ -19,6 +23,7 @@ export default function Main() {
           location={item.location}
           languages={item.languages}
           tools={item.tools}
+          handleClick={handleClick}
         />
       ))}
     </main>
