@@ -11,10 +11,13 @@ export default function Offer({
   location,
   languages,
   tools,
+  handleClick,
 }) {
-  const style = `text-green-400 py-1 px-2 lg:h-fit rounded-sm font-bold bg-green-50`;
+  const style = `text-green-400 py-1 px-2 lg:h-fit rounded-sm font-bold bg-green-50 hover:bg-green-400 hover:text-green-50`;
   return (
-    <article className={`w-full px-6 pb-5 lg:py-8 lg:max-w-300 lg:mx-auto lg:flex lg:gap-6 rounded-lg shadow-xl shadow-green-400/20 bg-white ${featured ? "border-l-6 border-green-400" : ""}`}>
+    <article
+      className={`w-full px-6 pb-5 lg:py-8 lg:max-w-300 lg:mx-auto lg:flex lg:gap-6 rounded-lg shadow-xl shadow-green-400/20 bg-white ${featured ? "border-l-6 border-green-400" : ""}`}
+    >
       <img
         src={logo}
         className="relative -top-6 h-12 w-12 lg:h-22 lg:w-22 lg:top-0"
@@ -53,18 +56,32 @@ export default function Offer({
         <div className="h-0 border-bs border-gray-300 lg:hidden"></div>
 
         <div className="flex gap-4 flex-wrap lg:items-center">
-          <span className={`${style}`}>{role}</span>
-          <span className={`${style}`}>{level}</span>
+          <button onClick={handleClick} value={role} className={`${style}`}>
+            {role}
+          </button>
+          <button onClick={handleClick} value={level} className={`${style}`}>
+            {level}
+          </button>
           {languages.map((item, index) => (
-            <span key={index} className={`${style}`}>
+            <button
+              onClick={handleClick}
+              value={item}
+              key={index}
+              className={`${style}`}
+            >
               {item}
-            </span>
+            </button>
           ))}
 
           {tools.map((item, index) => (
-            <span key={index} className={`${style}`}>
+            <button
+              onClick={handleClick}
+              value={item}
+              key={index}
+              className={`${style}`}
+            >
               {item}
-            </span>
+            </button>
           ))}
         </div>
       </div>
