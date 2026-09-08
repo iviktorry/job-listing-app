@@ -28,7 +28,7 @@ export default function Offer({
 
       <div className="flex flex-1 flex-col gap-3 -mt-4 lg:mt-0 lg:flex-row lg:justify-between">
         <div className="flex flex-col gap-3 lg:gap-2">
-          <div className="flex gap-6 font-bold">
+          <div className="flex gap-4 flex-wrap  font-bold">
             <span className="text-green-400">{company}</span>
             <div className="flex gap-2">
               {isNew && (
@@ -37,7 +37,7 @@ export default function Offer({
                 </span>
               )}
               {featured && (
-                <span className="px-3 text-sm rounded-xl bg-black uppercase text-white flex items-center">
+                <span className="px-3 text-sm rounded-xl bg-green-900 uppercase text-white flex items-center">
                   Featured
                 </span>
               )}
