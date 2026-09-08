@@ -1,6 +1,16 @@
 import Offer from "./Offer";
 
-export default function OffersList({ data, handleClick, style }) {
+export default function OffersList({ data, handleClick, style, filters }) {
+  const filteredData = data.filter((item) => {
+    const criteria = [
+      item.role,
+      item.level,
+      ...(item.languages || []),
+      ...(item.tools || []),
+    ];
+    return filters.every((filter) => criteria.includes(filter));
+  });
+
   return (
     <div className="flex flex-col gap-10 justify-center">
       {data.map((item) => (
