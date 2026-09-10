@@ -16,6 +16,7 @@ export default function OffersList({ data, handleClick, style, filters }) {
       {filteredData.map((item) => (
         <Offer
           key={item.id}
+          id={item.id}
           company={item.company}
           logo={item.logo}
           isNew={item.new}
