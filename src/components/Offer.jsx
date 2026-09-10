@@ -2,6 +2,7 @@ import OfferDescriptionButton from "./OfferDescriptionButton";
 
 export default function Offer({
   company,
+  id,
   logo,
   isNew,
   featured,
@@ -16,14 +17,16 @@ export default function Offer({
   handleClick,
   style,
 }) {
+  const titleId = `job-title-${id}`;
   return (
     <article
+      aria-labelledby={titleId}
       className={`w-full px-6 pb-5 lg:py-8 lg:flex lg:gap-6 rounded-lg shadow-xl shadow-green-400/20 bg-white ${featured ? "border-l-6 border-green-400" : ""}`}
     >
       <img
         src={logo}
         className="relative -top-6 h-12 w-12 lg:h-22 lg:w-22 lg:top-0"
-        alt="logo"
+        alt=""
       />
 
       <div className="flex flex-1 flex-col gap-3 -mt-4 lg:mt-0 lg:flex-row lg:justify-between">
@@ -44,7 +47,7 @@ export default function Offer({
             </div>
           </div>
 
-          <p className="font-bold text-lg lg:text-2xl">{position}</p>
+          <h2 id={titleId} className="font-bold text-lg lg:text-2xl">{position}</h2>
 
           <div className="flex gap-2 text-gray-400">
             <span>{posted}</span>
