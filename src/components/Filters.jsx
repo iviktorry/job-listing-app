@@ -18,10 +18,11 @@ export default function Filters({
     <div className="flex justify-between relative -top-8 px-4 py-4 lg:h-18 lg:px-10 rounded-lg shadow-xl shadow-green-400/20 bg-white">
       <div className="flex gap-4 items-center flex-wrap">
         {filters.map((item, index) => (
-          <div className="flex h-fit items-center rounded-sm  overflow-hidden">
-            <span key={index} className={`${style}`}>
-              {item}
-            </span>
+          <div
+            key={index}
+            className="flex h-fit items-center rounded-sm  overflow-hidden"
+          >
+            <span className={`${style}`}>{item}</span>
             <button
               onClick={handleDeleteFilter}
               value={item}
