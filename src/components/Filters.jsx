@@ -25,9 +25,10 @@ export default function Filters({
             <button
               onClick={handleDeleteFilter}
               value={item}
+              aria-label={`Remove ${item} filter`}
               className="w-7 h-7 p-1.5 flex items-center justify-center bg-green-400 hover:bg-green-900"
             >
-              <img src={removeIcon} className="" alt="remove item" />
+              <img src={removeIcon} className="" alt="" />
             </button>
           </div>
         ))}
