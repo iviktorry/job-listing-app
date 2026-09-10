@@ -11,7 +11,6 @@ export default function Filters({
 
   function handleDeleteFilter(event) {
     const elValue = event.currentTarget.value;
-    console.log(elValue);
     setFilters((prev) => prev.filter((item) => item !== elValue));
   }
 
