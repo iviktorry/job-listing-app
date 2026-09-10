@@ -1,10 +1,6 @@
 import removeIcon from "../../public/images/icon-remove.svg";
 
-export default function Filters({
-  filters,
-  style,
-  setFilters,
-}) {
+export default function Filters({ filters, style, setFilters }) {
   function handleClearAll() {
     setFilters([]);
   }

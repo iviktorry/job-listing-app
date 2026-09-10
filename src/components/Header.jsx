@@ -7,6 +7,7 @@ export default function Header() {
       <picture className="w-full">
         <source media="(min-width: 768px)" srcSet={bgDesktop} />
         <img src={bgMobile} className="h-39 w-full object-cover" alt="" />
+        <h1 className="sr-only">Job listings</h1>
       </picture>
     </header>
   );
